@@ -1,0 +1,5 @@
+{
+  "spiral": "invoke_spiral_animation",
+  "lotus": "render_lotus_component",
+  "circuit": "activate_circuit_effect"
+}
