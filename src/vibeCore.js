@@ -16,8 +16,31 @@ class VibeCoder {
             ceremonyType: null
         };
         
-        // Load the symbol trigger dictionary
-        this.symbolDict = null; // Will be loaded from symbolTriggerDict.json
+        // Load the symbol trigger dictionary during initialization
+        this.symbolDict = {};
+        this.loadSymbolDict();
+    }
+
+    // <!-- 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ -->
+    /**
+     * Load the symbolic trigger dictionary so anchors can influence artifacts
+     */
+    async loadSymbolDict() {
+        try {
+            const url = new URL('./symbolTriggerDict.json', import.meta.url);
+
+            if (typeof fetch === 'function') {
+                const response = await fetch(url);
+                this.symbolDict = await response.json();
+            } else {
+                const fs = await import('fs');
+                const data = fs.readFileSync(url, 'utf-8');
+                this.symbolDict = JSON.parse(data);
+            }
+        } catch (err) {
+            console.warn('Symbol trigger dictionary failed to load:', err);
+            this.symbolDict = {};
+        }
     }
     
     /**
