@@ -71,6 +71,22 @@ const shrine = VibeCoder.transmute({
 console.log(shrine.manifest());
 ```
 
+## ⚙️ CLI Invocation
+
+If you prefer command line ceremonies, run `node cli.js` with either a JSON file
+or individual options:
+
+```bash
+# From a JSON specification
+node cli.js params.json
+
+# Or with direct flags
+node cli.js --vibe cosmic_dream --emotion nostalgic_wonder --symbols spiral,lotus --ritual_type landing_page
+```
+
+The CLI outputs a JSON object containing the generated `html`, `css`, and `js`
+segments ready for your shrine.
+
 ## 🛡️ Intellectual Property Protection
 
 This work is protected across multiple dimensions:
