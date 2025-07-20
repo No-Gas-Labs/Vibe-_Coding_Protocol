@@ -1,0 +1,129 @@
+<!-- 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relic Fusion Mode 13X</title>
+  <style>
+    /* Base styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Courier New", monospace;
+      background: radial-gradient(circle at 50% 10%, #222, #000);
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+    #stateDisplay {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      background: rgba(0,0,0,0.5);
+      line-height:1.4;
+    }
+    #sigil-map {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      padding-top:3rem;
+    }
+    .sigil {
+      width:60px;
+      height:60px;
+      margin:1rem;
+      border-radius:50%;
+      background:#111;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:1.5rem;
+      cursor:pointer;
+      box-shadow:0 0 10px rgba(0,255,255,0.6);
+      transition:transform 0.3s;
+    }
+    .sigil:hover {transform:scale(1.2);} 
+    .module-modal {
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.85);
+      color:#fff;
+      display:none;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:1rem;
+      z-index:1000;
+    }
+    .module-modal.active {display:flex;}
+    button.close {
+      margin-top:1rem;
+      padding:0.5rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header id="modeIndicator">Claude Mode</header>
+  <div id="sigil-map"></div>
+  <div id="stateDisplay"></div>
+  <div id="moduleContainer"></div>
+  <script>
+  /* 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ */
+  const state = JSON.parse(localStorage.getItem('relicFusionState')) || {
+    xp:0, loops:0, relics:[], scrolls:0, rebirths:0, mode:'claude'
+  };
+  function saveState(){ localStorage.setItem('relicFusionState', JSON.stringify(state)); displayState(); }
+  function displayState(){ document.getElementById('stateDisplay').textContent = `XP:${state.xp} | Loops:${state.loops} | Relics:${state.relics.length}`; }
+  function setMode(mode){ state.mode=mode; document.getElementById('modeIndicator').textContent = mode.charAt(0).toUpperCase()+mode.slice(1)+" Mode"; saveState(); }
+  function cycleMode(){ const modes=['claude','gpt','glitch']; let i=modes.indexOf(state.mode); i=(i+1)%modes.length; setMode(modes[i]); }
+  document.getElementById('modeIndicator').addEventListener('click',cycleMode);
+
+  const modules=[
+  {name:'Voting Mechanics', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Voting</h2><p>Vote to earn XP.</p><button id=vYes>Yes</button> <button id=vNo>No</button>`;return c;}},
+  {name:'Prophecy Mirror', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Prophecy Mirror</h2><textarea id=mirror rows=4 cols=30 placeholder='Whisper your prophecy'></textarea>`;return c;}},
+  {name:'Claude to GPT Toggle', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Claude/GPT Toggle</h2><p>Current mode: <strong>${state.mode}</strong></p>`;return c;}},
+  {name:'Chain State Triggers', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Chain Triggers</h2><p>EOS/SUI/TON placeholder states.</p>`;return c;}},
+  {name:'Relic Unlocking', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Relic Unlocking</h2><button id=unlock>Unlock Relic</button>`;return c;}},
+  {name:'Ritual Interface', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Ritual Interface</h2><p>Navigational shrine node.</p>`;return c;}},
+  {name:'Entropy Glitch', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Entropy Burst</h2><button id=burst>Glitch</button>`;return c;}},
+  {name:'Prompt Replay', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Claude Prompt Replay</h2><p>Revisit your last invocation.</p>`;return c;}},
+  {name:'Memory Weaving', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Dream Mapping</h2><p>Map your dreams here.</p>`;return c;}},
+  {name:'Admin Override', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Admin Override</h2><p>Restricted controls.</p>`;return c;}},
+  {name:'Sigil Navigation', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Sigil Navigation</h2><p>Navigate by sigils.</p>`;return c;}},
+  {name:'Dynamic Theming', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Dynamic Theme</h2><button id=toggleTheme>Toggle Theme</button>`;return c;}},
+  {name:'Chimera Node', init:()=>{const c=document.createElement('div');c.innerHTML=`<h2>Chimera Node</h2><p>Final fusion relic.</p>`;return c;}}
+  ];
+
+  const map=document.getElementById('sigil-map');
+  modules.forEach((m,i)=>{const s=document.createElement('div');s.className='sigil';s.textContent='⬤';s.title=m.name;s.addEventListener('click',()=>openModule(i));map.appendChild(s);});
+
+  function openModule(i){const mod=modules[i];const modal=document.createElement('div');modal.className='module-modal active';modal.innerHTML=`<!-- MODULE ${('0'+(i+1)).slice(-2)}: ${mod.name} --><div></div><button class=close>Close</button>`;modal.firstChild.replaceWith(mod.init());modal.querySelector('button.close').addEventListener('click',()=>modal.remove());document.body.appendChild(modal);} 
+
+  // Example interactions
+  document.addEventListener('click', e=>{
+    if(e.target.id==='vYes'){state.xp+=1;saveState();}
+    if(e.target.id==='unlock'){state.relics.push('Relic '+(state.relics.length+1));state.xp+=5;saveState();}
+    if(e.target.id==='burst'){document.body.style.filter='invert(1)';setTimeout(()=>{document.body.style.filter='';},200);}
+    if(e.target.id==='toggleTheme'){document.body.classList.toggle('alt');}
+  });
+
+  displayState();
+  setMode(state.mode);
+  </script>
+</body>
+</html>
