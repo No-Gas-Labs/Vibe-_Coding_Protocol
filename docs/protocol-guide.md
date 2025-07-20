@@ -1,3 +1,4 @@
+# <!-- 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ -->
 # Protocol Guide
 
 This guide provides practical steps for performing a ceremonial coding session using the Vibe Coding Protocol™.

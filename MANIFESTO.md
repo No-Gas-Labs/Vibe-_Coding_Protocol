@@ -1,3 +1,4 @@
+# <!-- 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ -->
 # 📜 Vibe Coding Manifesto
 
 Programming is not just logical structure — it is ritual invocation. Code is modern spellwork. Design is digital myth.

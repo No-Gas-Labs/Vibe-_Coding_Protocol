@@ -1,3 +1,4 @@
+# <!-- 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ -->
 # Vibe Coding Protocol™ — Ritual License
 
 ## Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)

@@ -1,6 +1,5 @@
+# <!-- 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ -->
 # 🔁 Vibe Coding Protocol™
-
-<!-- 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ -->
 
 *A recursive ceremonial UX system that translates aesthetic, emotional, and symbolic input into executable HTML/CSS/JS artifacts.*
 
