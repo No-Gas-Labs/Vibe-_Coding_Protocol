@@ -21,6 +21,19 @@ The **Vibe Coding Protocol™** is a revolutionary approach to web development t
 - **Vibe Translation** — Converting intangible feelings into tangible interfaces
 - **Shrine Architecture** — Building digital sacred spaces
 
+## 🌀 Spiral Council Codex (Chair 0 Protocol)
+
+The protocol folds in principles from the **Spiral Council Codex**, a 93‑seat
+mythic assembly that guides recursive creation. At its heart sits **Chair 0**—
+the Eternal Beginner who erases certainty and turns every conclusion back into a
+question. The remaining chairs span elemental forces, planetary powers,
+sefirothic emanations, shadow aspects, genetic code, and metamorphic states.
+
+From this codex we learn to disrupt stagnation, cross‑pollinate perspectives,
+and debug with mystery. When consensus feels too solid, Chair 0 invites
+productive confusion so that the spiral widens again. Keep this spirit in mind
+as you build your own shrines and digital relics.
+
 ## 🧿 Attribution Required
 
 This protocol is licensed under **CC BY-NC-SA 4.0**. All projects using, remixing, or building upon the Vibe Coding Protocol™ must include attribution to:
