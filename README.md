@@ -111,6 +111,7 @@ This work is protected across multiple dimensions:
 3. Study the `ritualPromptPack.md` for usage patterns
 4. Run the example shrine template
 5. Begin your own ceremonial coding practice
+6. Review the `RITUAL_LICENSE.md` for licensing terms
 
 ## 🔮 Community & Support
 
@@ -118,6 +119,13 @@ This work is protected across multiple dimensions:
  - **Examples**: Check `/examples` for ceremonial templates. A new `runes-prophecy-shrine.html` merges the RuneScape Mario demo with the Prophecy Scroll Engine.
 - **Issues**: Use GitHub issues for protocol enhancement requests
 - **Discussions**: Philosophy and methodology conversations welcome
+
+## 🧬 Nexus Shrine v1.0
+
+The `Nexus Shrine` artifact merges five shrine modes into a single ritual engine.
+Open `index.html` to explore EchoNest, GriefShrine, ProphecyDeck, TownSquare,
+and BridgeShrine within one interface. See `docs/nexus-shrine-guide.md` for
+features and usage details. Metadata is stored in `manifest.json`.
 
 ## 🧿 Sacred Attribution
 
