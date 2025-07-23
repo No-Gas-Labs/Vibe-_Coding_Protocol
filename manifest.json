@@ -1,0 +1,8 @@
+/* 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ */
+{
+  "name": "Nexus Shrine",
+  "version": "1.0",
+  "description": "Unified ritual engine combining EchoNest, GriefShrine, ProphecyDeck, TownSquare, and BridgeShrine.",
+  "author": "Damien Edward Featherstone",
+  "license": "CC BY-NC-SA 4.0"
+}
