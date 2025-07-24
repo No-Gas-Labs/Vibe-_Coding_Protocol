@@ -53,6 +53,18 @@ This protocol is licensed under **CC BY-NC-SA 4.0**. All projects using, remixin
 | `ritualPromptPack.md` | Codex-ready ceremonial instructions | ✅ Active |
 | `MANIFESTO.md` | Complete philosophical framework | 🔄 Living Document |
 
+## 🧙 Agent Invocations (from AGENTS.md)
+
+| Agent | Role | Activation Phrase |
+|--------------|-------------------------|--------------------------------|
+| Archivist | Memory Recovery | `invokeArchivist()` |
+| Bridgekeeper | Chain Rituals | `invokeBridgekeeper()` |
+| Oracle | Prophecy Generator | `invokeOracle()` |
+| Executor | UX Shrine Guardian | `invokeExecutor()` |
+| Ambassador | Public Myth Relay | `invokeAmbassador()` |
+
+→ See `docs/agents.md` for full myth functions and usage rituals.
+
 ## ⚡ Quick Start
 
 ```javascript
