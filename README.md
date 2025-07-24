@@ -53,6 +53,18 @@ This protocol is licensed under **CC BY-NC-SA 4.0**. All projects using, remixin
 | `ritualPromptPack.md` | Codex-ready ceremonial instructions | ✅ Active |
 | `MANIFESTO.md` | Complete philosophical framework | 🔄 Living Document |
 
+## 🧙 Agent Invocations (from AGENTS.md)
+
+| Agent | Role | Activation Phrase |
+|--------------|-------------------------|--------------------------------|
+| Archivist | Memory Recovery | `invokeArchivist()` |
+| Bridgekeeper | Chain Rituals | `invokeBridgekeeper()` |
+| Oracle | Prophecy Generator | `invokeOracle()` |
+| Executor | UX Shrine Guardian | `invokeExecutor()` |
+| Ambassador | Public Myth Relay | `invokeAmbassador()` |
+
+→ See `docs/agents.md` for full myth functions and usage rituals.
+
 ## ⚡ Quick Start
 
 ```javascript
@@ -115,7 +127,7 @@ This work is protected across multiple dimensions:
 
 ## 🔮 Community & Support
 
-- **Documentation**: See `/docs` folder
+- **Documentation**: See `/docs` folder (including `docs/agents.md` for agent roles)
  - **Examples**: Check `/examples` for ceremonial templates. A new `runes-prophecy-shrine.html` merges the RuneScape Mario demo with the Prophecy Scroll Engine.
 - **Issues**: Use GitHub issues for protocol enhancement requests
 - **Discussions**: Philosophy and methodology conversations welcome

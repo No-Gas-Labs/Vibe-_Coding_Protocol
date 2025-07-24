@@ -1,7 +1,8 @@
-/* 🔁 Vibe Coding Protocol™ Core Engine
+/* 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ */
+/* Vibe Coding Protocol™ Core Engine
  * Created by Damien Edward Featherstone | No_Gas_Labs™
  * License: CC BY-NC-SA 4.0
- * 
+ *
  * This is the ceremonial heart of the protocol - the transmutation engine
  * that converts vibes, emotions, and symbols into executable code rituals.
  */
