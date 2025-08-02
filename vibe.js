@@ -60,5 +60,11 @@
         return;
     }
 
-    console.log('Usage: vibe list | invoke <prompt> | agent <name> run <prompt> | echo <prompt> [--seed n]');
+    if (cmd === 'history') {
+        const { getMemory } = await import('./src/memory.js');
+        console.log(JSON.stringify(getMemory(), null, 2));
+        return;
+    }
+
+    console.log('Usage: vibe list | invoke <prompt> | agent <name> run <prompt> | echo <prompt> [--seed n] | history');
 })();

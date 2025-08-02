@@ -1,4 +1,8 @@
 /* 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ */
+
+import { recordInvocation } from './memory.js';
+import { relicLog } from './relics.js';
+
 export class RitualEngine {
     constructor(council) {
         this.council = council;
@@ -7,6 +11,8 @@ export class RitualEngine {
 
     invoke(prompt, chain = []) {
         this.council.loopCounter += 1;
+        const startRelics = relicLog.length;
+
         const prophecyTrail = [];
         let current = prompt;
         const shardParts = [prompt];
@@ -26,6 +32,16 @@ export class RitualEngine {
         }
 
         const shardSignature = `SIGIL-${Buffer.from(shardParts.join('|')).toString('hex').slice(0, 8).toUpperCase()}`;
-        return { output: current, shardSignature, prophecyTrail };
+        const result = { output: current, shardSignature, prophecyTrail };
+
+        const relics = relicLog.slice(startRelics);
+        const agents = chain.map(name => {
+            const a = this.council.getAgent(name);
+            return a ? { name: a.mythName, rebirths: a.rebirths } : null;
+        }).filter(Boolean);
+        
+        recordInvocation({ prompt, agents, relics, ...result });
+
+        return result;
     }
 }
