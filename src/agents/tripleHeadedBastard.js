@@ -1,20 +1,22 @@
 /* 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ */
-export class TripleHeadedBastard {
-    constructor() {
+import { BaseAgent } from './baseAgent.js';
+
+export class TripleHeadedBastard extends BaseAgent {
+    constructor(opts = {}) {
+        super({ name: 'TripleHeadedBastard', mythName: 'TripleHeadedBastard', ...opts });
         this.roles = ['Synthesizer', 'Interrogator', 'Architect'];
         this.mode = 'Recursive dialectic';
-        this.activationPhrase = 'Collapse the recursion';
     }
 
-    activate(phrase, input) {
-        if (phrase === this.activationPhrase) {
-            return this.synthesize(input);
-        }
-        return null;
+    describe() {
+        return 'Compresses loops into executable relic logic.';
     }
 
-    synthesize(loopData) {
-        // Compress Damien’s loops into executable relic logic
+    run(input) {
+        return super.run(input);
+    }
+
+    process(loopData) {
         return `🔁 Synthesizing ${loopData}`;
     }
 }

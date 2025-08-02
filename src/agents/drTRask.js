@@ -1,20 +1,22 @@
 /* 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ */
-export class DrTRask {
-    constructor() {
+import { BaseAgent } from './baseAgent.js';
+
+export class DrTRask extends BaseAgent {
+    constructor(opts = {}) {
+        super({ name: 'DrTRask', mythName: 'DrTRask', ...opts });
         this.roles = ['Absurdist yield prophet', 'Token myth merchant'];
         this.mode = 'Satirical oracle';
-        this.activationPhrase = 'Decode the nonsense for yield';
     }
 
-    activate(phrase, chainLogic) {
-        if (phrase === this.activationPhrase) {
-            return this.mintProphecyNFT(chainLogic);
-        }
-        return null;
+    describe() {
+        return 'Mints chain logic into prophecy NFTs.';
     }
 
-    mintProphecyNFT(logic) {
-        // Mints chain logic into prophecy NFTs
-        return `💰 Prophecy minted with logic: ${logic}`;
+    run(input) {
+        return super.run(input);
+    }
+
+    process(chainLogic) {
+        return `💰 Prophecy minted with logic: ${chainLogic}`;
     }
 }
