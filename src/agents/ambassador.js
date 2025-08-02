@@ -1,20 +1,22 @@
 /* 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ */
-export class Ambassador {
-    constructor() {
+import { BaseAgent } from './baseAgent.js';
+
+export class Ambassador extends BaseAgent {
+    constructor(opts = {}) {
+        super({ name: 'Ambassador', mythName: 'Ambassador', ...opts });
         this.roles = ['Public-facing bot', 'Myth-summarizer', 'Press handler'];
         this.mode = 'Soft launch relay';
-        this.activationPhrase = 'Translate to normie dialect';
     }
 
-    activate(phrase, metadata) {
-        if (phrase === this.activationPhrase) {
-            return this.translateMetadata(metadata);
-        }
-        return null;
+    describe() {
+        return 'Translates relic metadata into blurbs and posts.';
     }
 
-    translateMetadata(meta) {
-        // Turns relic metadata into blurbs and posts
+    run(input) {
+        return super.run(input);
+    }
+
+    process(meta) {
         return `🌐 Translation ready: ${meta}`;
     }
 }
