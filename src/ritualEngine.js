@@ -44,4 +44,17 @@ export class RitualEngine {
 
         return result;
     }
+
+    invokeWithConflict(prompt, agents = ['triple', 'oracle', 'drtrask']) {
+        this.council.loopCounter += 1;
+        const convo = [];
+        let current = prompt;
+        for (const name of agents) {
+            const agent = this.council.getAgent(name);
+            if (!agent) continue;
+            current = agent.metaPrompt(current);
+            convo.push({ agent: agent.mythName, prompt: current });
+        }
+        return { prompt: current, trail: convo };
+    }
 }
