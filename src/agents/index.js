@@ -7,6 +7,10 @@ import { OracleOfScroll } from './oracleOfScroll.js';
 import { SpectralEvaluator } from './spectralEvaluator.js';
 import { TripleHeadedBastard } from './tripleHeadedBastard.js';
 import { Ambassador } from './ambassador.js';
+import { ParasiteOfSignal } from './parasiteOfSignal.js';
+import { MirrorMender } from './mirrorMender.js';
+import { ShrineJester } from './shrineJester.js';
+import { ArchiveBurner } from './archiveBurner.js';
 
 export const AGENT_CLASSES = {
     archivist: Archivist,
@@ -16,7 +20,11 @@ export const AGENT_CLASSES = {
     oracle: OracleOfScroll,
     spectral: SpectralEvaluator,
     triple: TripleHeadedBastard,
-    ambassador: Ambassador
+    ambassador: Ambassador,
+    parasite: ParasiteOfSignal,
+    mender: MirrorMender,
+    jester: ShrineJester,
+    burner: ArchiveBurner
 };
 
 export function registerAllAgents(council) {
