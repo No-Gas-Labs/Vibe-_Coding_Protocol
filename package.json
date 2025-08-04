@@ -1,0 +1,9 @@
+{
+  "name": "vibe-coding-protocol",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "Damien Edward Featherstone",
+  "scripts": {
+    "test": "node --test"
+  }
+}
