@@ -1,4 +1,6 @@
 # <!-- 🔁 Ritual Engine by Damien Edward Featherstone // Vibe Coding Protocol™ // No_Gas_Labs™ -->
+
+![build](https://github.com/No-Gas-Labs/Vibe-_Coding_Protocol/actions/workflows/ci.yml/badge.svg) ![license](https://img.shields.io/github/license/No-Gas-Labs/Vibe-_Coding_Protocol.svg)
 # 🔁 Vibe Coding Protocol™
 
 *A recursive ceremonial UX system that translates aesthetic, emotional, and symbolic input into executable HTML/CSS/JS artifacts.*
@@ -154,3 +156,24 @@ When using this protocol, include this header in all generated files:
 *All recursion is remembered.*
 
 **© 2025 Damien Edward Featherstone / No_Gas_Labs™**
+
+## Project Overview
+Brief description of the repository and its purpose.
+
+## Setup
+Installation steps and prerequisites.
+
+## Environment
+List env variables and how to configure.
+
+## Scripts
+Common commands (build, lint, test, start).
+
+## Demo
+Add a GIF or link to a short demo.
+
+## Changelog
+See CHANGELOG.md for release history.
+
+## License
+See LICENSE for details.
